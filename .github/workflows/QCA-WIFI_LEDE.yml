@@ -34,7 +34,7 @@ jobs:
       matrix:
        # TARGET: [IPQ60XX-WIFI-EMMC-docker-YES_LEDE, IPQ60XX-WIFI-YES_LEDE]
        TARGET: [IPQ60XX-WIFI-YES_LEDE]
-        SOURCE: [coolsnowwolf/lede]
+       SOURCE: [coolsnowwolf/lede]
 
     #调用公用编译核心
     uses: ./.github/workflows/WRT-CORE_LEDE.yml
