@@ -195,3 +195,7 @@ CONFIG_PACKAGE_v2ray-geosite=y
 CONFIG_PACKAGE_wireless-regdb=y
 CONFIG_PACKAGE_wsdd2=y
 CONFIG_PARTED_READLINE=y
+CONFIG_PACKAGE_luci-app-accesscontrol=n
+CONFIG_PACKAGE_luci-app-nlbwmon=n
+CONFIG_PACKAGE_luci-app-vlmcsd=n
+CONFIG_PACKAGE_uci-app-vsftpd=n
