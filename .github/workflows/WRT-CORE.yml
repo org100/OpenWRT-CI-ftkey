@@ -67,7 +67,19 @@ jobs:
     steps:
       - name: Checkout Projects
         uses: actions/checkout@main
+        
+      - name: Machine Information
+        run: |
+          cd ./wrt/
 
+          echo "======================="
+          lscpu | grep -E "name|Core|Thread"
+          echo "======================="
+          df -h
+          echo "======================="
+          du -h --max-depth=1
+          echo "======================="
+          
       - name: Free Disk Space
         uses: endersonmenezes/free-disk-space@main
         with:
@@ -101,7 +113,7 @@ jobs:
           sudo bash -c 'bash <(curl -sL https://build-scripts.immortalwrt.org/init_build_environment.sh)'
           sudo -E systemctl daemon-reload
           sudo -E timedatectl set-timezone "Asia/Shanghai"
-
+          
       - name: Initialization Values
         run: |
           export WRT_DATE=$(TZ=UTC-8 date +"%y.%m.%d_%H.%M.%S")
@@ -193,18 +205,6 @@ jobs:
           cd ./wrt/
 
           make -j$(nproc) || make -j1 V=s
-
-      - name: Machine Information
-        run: |
-          cd ./wrt/
-
-          echo "======================="
-          lscpu | grep -E "name|Core|Thread"
-          echo "======================="
-          df -h
-          echo "======================="
-          du -h --max-depth=1
-          echo "======================="
 
       - name: Package Firmware
         run: |
