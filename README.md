@@ -40,22 +40,22 @@
     ```
     CONFIG_PACKAGE_luci-app-ssr-plus=y // LEDE|OWRT|LIBWRT
     CONFIG_PACKAGE_luci-app-homeproxy=y // LEDE-FW4|OWRT|LIBWRT
-    CONFIG_PACKAGE_luci-app-advancedplus=y
-    CONFIG_PACKAGE_luci-app-alist=y
-    CONFIG_PACKAGE_luci-app-cpufreq=y
-    CONFIG_PACKAGE_luci-app-ddns=y
-    CONFIG_PACKAGE_luci-app-diskman=y
-    CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
-    CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
-    CONFIG_PACKAGE_luci-app-msd_lite=y
-    CONFIG_PACKAGE_luci-app-openvpn-server=y
-    CONFIG_PACKAGE_luci-app-samba4=y
-    CONFIG_PACKAGE_luci-app-socat=y
-    CONFIG_PACKAGE_luci-app-ttyd=y
-    CONFIG_PACKAGE_luci-app-turboacc=y
-    CONFIG_PACKAGE_luci-app-wolplus=y
-    CONFIG_PACKAGE_luci-app-zerotier=y
-    CONFIG_PACKAGE_luci-theme-argon=y
+    CONFIG_PACKAGE_luci-app-advancedplus=y  # 高级设置
+    CONFIG_PACKAGE_luci-app-alist=y  # Alist网络服务管理
+    CONFIG_PACKAGE_luci-app-cpufreq=y  # CPU频率策略控制
+    CONFIG_PACKAGE_luci-app-ddns=y  # 动态DNS客户端
+    CONFIG_PACKAGE_luci-app-diskman=y  # 磁盘管理
+    CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y  # 支持Btrfs文件系统
+    CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y  # 支持lsblk磁盘工具
+    CONFIG_PACKAGE_luci-app-msd_lite=y  # 组播服务器
+    CONFIG_PACKAGE_luci-app-openvpn-server=y  # OpenVPN服务器
+    CONFIG_PACKAGE_luci-app-samba4=y  # Samba文件共享
+    CONFIG_PACKAGE_luci-app-socat=y  # Socat端口转发工具
+    CONFIG_PACKAGE_luci-app-ttyd=y  # Web终端
+    CONFIG_PACKAGE_luci-app-turboacc=y  # 网络加速
+    CONFIG_PACKAGE_luci-app-wolplus=y  # 网络唤醒
+    CONFIG_PACKAGE_luci-app-zerotier=y  # ZeroTier虚拟网络
+    CONFIG_PACKAGE_luci-theme-argon=y  # Argon主题
     ```
 
 </details>
