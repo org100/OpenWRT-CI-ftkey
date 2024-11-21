@@ -32,11 +32,6 @@ on:
         default: true
         required: true
         type: boolean
-      KERNEL:
-        description: '内核版本'
-        required: false
-        type: choice
-        options: ['6.6', '6.1']
 
 #CI权限
 permissions: write-all
@@ -72,5 +67,3 @@ jobs:
       WRT_PACKAGE: ${{inputs.PACKAGE}}
       #仅输出配置文件
       WRT_TEST: ${{inputs.TEST}}
-      #内核版本
-      WRT_KERNEL: ${{inputs.KERNEL}}
