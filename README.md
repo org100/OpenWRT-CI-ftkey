@@ -38,8 +38,8 @@
 <details><summary>CONFIG_PACKAGE_luci-app-xxx=y</summary>
     
     ```
-    CONFIG_PACKAGE_luci-app-ssr-plus=y // LEDE
-    CONFIG_PACKAGE_luci-app-homeproxy=y // OWRT|LIBWRT|LEDE-FW4
+    CONFIG_PACKAGE_luci-app-ssr-plus=y // LEDE|OWRT|LIBWRT
+    CONFIG_PACKAGE_luci-app-homeproxy=y // LEDE-FW4|OWRT|LIBWRT
     CONFIG_PACKAGE_luci-app-advancedplus=y
     CONFIG_PACKAGE_luci-app-alist=y
     CONFIG_PACKAGE_luci-app-cpufreq=y
