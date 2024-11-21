@@ -117,7 +117,7 @@ jobs:
         run: |
           git clone --depth=1 --single-branch --branch $WRT_BRANCH $WRT_REPO ./wrt/
           if [[ -n $WRT_KERNEL ]]; then
-            sed -i 's/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=$WRT_KERNEL/' ./wrt/target/linux/qualcommax/Makefile
+            sed -i "s/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=$WRT_KERNEL/" ./wrt/target/linux/qualcommax/Makefile
             cat ./wrt/target/linux/qualcommax/Makefile
           fi
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
