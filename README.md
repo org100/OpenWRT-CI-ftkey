@@ -38,7 +38,7 @@
 <details><summary>CONFIG_PACKAGE_luci-app-xxx=y</summary>
     
     ```
-    CONFIG_PACKAGE_luci-app-ssr-plus=y // LEDE|OWRT|LIBWRT
+    CONFIG_PACKAGE_luci-app-ssr-plus=y // LEDE|LEDE-FW4|OWRT|LIBWRT
     CONFIG_PACKAGE_luci-app-homeproxy=y // LEDE-FW4|OWRT|LIBWRT
     CONFIG_PACKAGE_luci-app-advancedplus=y  # 高级设置
     CONFIG_PACKAGE_luci-app-alist=y  # Alist网络服务管理
