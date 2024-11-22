@@ -247,14 +247,14 @@ jobs:
           files: ./wrt/upload/*.*
           body: |
 
-            **This is OpenWrt Firmware for ${{ env.WRT_NAME }}**
+            **This is ${{ env.WRT_NAME }} OpenWrt Firmware for ${{ env.WRT_TYPE }}**
             ### 📒 固件信息(无WIFI)
             - 🖥️ 这是  ${{ env.WRT_TYPE }} 使用的 OpenWrt 固件
             - 💻 平台: ${{ env.WRT_TARGET }}
             - ⚽ 源码: ${{ env.WRT_SOURCE }}
             - 💝 分支: ${{ env.WRT_BRANCH }}
-            - 🌐 地址: ** ${{ env.WRT_IP }} **
-            - 🔑 密码: ** ${{ env.WRT_PW }} **
+            - 🌐 地址: **${{ env.WRT_IP }}**
+            - 🔑 密码: **${{ env.WRT_PW }}**
             ### 🧊 固件版本
             - 固件内核版本：**${{ env.VERSION_KERNEL }}**
             - 固件编译前最后一次➦[主源码](${{ env.WRT_REPO }})更新记录
