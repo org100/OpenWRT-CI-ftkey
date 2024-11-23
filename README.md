@@ -1,11 +1,16 @@
-# IPQ60xx-WRT-CI(无WIFI) 
+# ER1-WRT-CI
+
+只编译: 
+
+    ipq60xx_DEVICE_jdcloud_re-cs-07=y # 京东云RE-CS-07 (太乙)
+
+可编译: 
 
     ipq60xx_DEVICE_cmiot_ax18=y # 和目AX1800
     ipq60xx_DEVICE_glinet_gl-ax1800=y # GL.iNet GL-AX1800
     ipq60xx_DEVICE_glinet_gl-axt1800=y # GL.iNet GL-AXT1800
     ipq60xx_DEVICE_jdcloud_re-ss-01=y # 京东云RE-SS-01 (亚瑟)
     ipq60xx_DEVICE_jdcloud_re-cs-02=y # 京东云RE-CS-02 (雅典娜)
-    ipq60xx_DEVICE_jdcloud_re-cs-07=y # 京东云RE-CS-07 (太乙)
     ipq60xx_DEVICE_qihoo_360v6=y # 奇虎360V6
     ipq60xx_DEVICE_redmi_ax5-jdcloud=y # 红米AX5（京东云版）
     ipq60xx_DEVICE_redmi_ax5=y # 红米AX5
