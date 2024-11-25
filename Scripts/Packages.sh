@@ -84,8 +84,3 @@ UPDATE_VERSION "tailscale"
 UPDATE_VERSION "alist"
 #修复Openvpnserver一键生成证书
 UPDATE_VERSION "openvpn-easy-rsa" 
-#修复Openvpnserver无法多终端同时连接
-if [ -d "../feeds/luci/applications/luci-app-openvpn-server/root/etc/config/" ]; then
-    echo "	option duplicate_cn '1'" >> $(find ../feeds/luci/applications/luci-app-openvpn-server/root/etc/config/ -type f -name "openvpn")
-    echo "OpenVPN has been fixed to resolve the issue of duplicate connecting!"
-fi
