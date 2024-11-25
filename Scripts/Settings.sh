@@ -36,6 +36,12 @@ if [ -d "./feeds/luci/applications/luci-app-openvpn-server/root/etc/config/" ]; 
     echo "	option duplicate_cn '1'" >> $(find ./feeds/luci/applications/luci-app-openvpn-server/root/etc/config/ -type f -name "openvpn")
     echo "OpenVPN has been fixed to resolve the issue of duplicate connecting!"
 fi
+#修复Openvpnserver无法连接局域网和外网问题
+if [ -d "./package/network/config/firewall/files/firewall.user" ]; then
+    echo "iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o br-lan -j MASQUERADE" >> ./package/network/config/firewall/files/firewall.user
+    echo "OpenVPN has been fixed and is now accessible on the network!"
+fi
+
 echo "CONFIG_PACKAGE_luci=y" >> ./.config
 echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
