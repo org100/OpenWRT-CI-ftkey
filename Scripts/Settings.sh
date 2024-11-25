@@ -31,6 +31,11 @@ if [[ $WRT_REPO == *"lede"* ]]; then
 fi
 
 #配置文件修改
+#修复Openvpnserver无法多终端同时连接
+if [ -d "./feeds/luci/applications/luci-app-openvpn-server/root/etc/config/" ]; then
+    echo "	option duplicate_cn '1'" >> $(find ./feeds/luci/applications/luci-app-openvpn-server/root/etc/config/ -type f -name "openvpn")
+    echo "OpenVPN has been fixed to resolve the issue of duplicate connecting!"
+fi
 echo "CONFIG_PACKAGE_luci=y" >> ./.config
 echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
