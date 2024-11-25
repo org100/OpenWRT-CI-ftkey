@@ -37,7 +37,7 @@ if [ -d "./feeds/luci/applications/luci-app-openvpn-server/root/etc/config/" ]; 
     echo "OpenVPN has been fixed to resolve the issue of duplicate connecting!"
 fi
 #修复Openvpnserver无法连接局域网和外网问题
-if [ -d "./package/network/config/firewall/files/firewall.user" ]; then
+if [ -f "./package/network/config/firewall/files/firewall.user" ]; then
     echo "iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o br-lan -j MASQUERADE" >> ./package/network/config/firewall/files/firewall.user
     echo "OpenVPN has been fixed and is now accessible on the network!"
 fi
